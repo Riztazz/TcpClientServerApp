@@ -13,22 +13,22 @@ using boost::system::error_code;
 class Client
 {
 public:
-	Client( const std::string    ip,
-	        const unsigned short port );
+    Client( const std::string    ip,
+            const unsigned short port );
 
-	~Client();
+    ~Client();
 
-	void start();
-	void stop ();
+    void start();
+    void stop ();
 
 private:
-	bool connectToServer();
+    bool connectToServer();
 
-	io_service      _ios;
-	tcp::endpoint   _endpoint;
-	tcp::socket     _socket;
+    io_service      _ios;
+    tcp::endpoint   _endpoint;
+    tcp::socket     _socket;
 
-	Packet          _packet;
+    Packet          _packet;
 };
 
 #endif /* INCLUDE_CLIENT_HPP_ */
